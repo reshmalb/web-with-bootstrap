@@ -1,0 +1,41 @@
+div {
+    height: 10%;
+     width: 10%;
+    
+    }
+  
+   form  {
+    text-align: center;
+         background-color: rgb(222, 124, 21);
+         border: 2px solid powderblue;         
+         align-content: center;
+         width: 400%;
+         height: 400%;
+         margin-left: 300%;
+         margin-right: 20%;
+         margin-top: 30%;
+         margin-bottom: 50%;
+         }
+         h2{
+            text-align: center;
+         }
+       
+   
+         body {background-color: rgb(0, 255, 238);
+              width: auto;
+              height: auto;
+              }
+   
+   
+              /* .button{ 
+                background-color:orange;  
+                border: none; 
+                color: orange;
+                padding: 5px 70px; 
+                text-align: center; 
+                text-decoration: none; 
+                display: inline-block; 
+                margin: 2px 6px; 
+                cursor: pointer; 
+                font-size: 20px; 
+                }  */

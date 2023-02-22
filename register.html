@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        
+              <form action="#" onsubmit="dosignup(event)">
+                <h2>Book a call</h2>
+            <label for="fname" class="form-label">Name:</label>
+             <br>
+             <input type="text" name="username" required class="form-control">
+             <br>
+            <label for="email" class="form-label">Email: </label>
+            <br>
+            <input type="email" name="email" required class="form-control " >
+            <br>
+            <label for="phone" class="form-label">Phone: </label>
+            <br>
+            <input type="tel" name="phone" required class="form-control">
+            <br>
+            <label for="time" class="form-label">Time for call:: </label>
+            <br>
+             
+            <input type="date" name="date"  required class="form-check-label">
+            <input type="time"name="time" required class="form-check-label">
+        
+            <br/>
+            <button class="form-control">Get a call</button> 
+          </form>
+      
+        </div>
+    
+
+<!--bootstrap.jss-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.3/axios.min.js">
+    function dosignup(event) {
+        event.preventDefault();
+        var name=(event.target.username.value)
+        var email=(event.target.email.value)
+        var phone=(event.target.phone.value)
+        var time=(event.target.time.value)
+        var date=(event.target.date.value)
+        const obj={
+                 name,
+                 email,
+                 phone,
+                 time,
+                 date
+        }
+        axios.put("https://crudcrud.com/api/b700b36ad7b7452b99174ae1ae647e97/AppointmnetData",obj)
+        .then(respose=>console.log(respose))
+        .catch(err=>console.log(err))
+      }
+    </script>
+</body>
+
+</html>
